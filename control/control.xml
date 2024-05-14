@@ -123,53 +123,53 @@ textdomain="control"
         <online_repos_preselected config:type="boolean">false</online_repos_preselected>
 
         <!-- FATE #300898, List of external sources accesible during the installation time -->
-        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Factory_Servers.xml</external_sources_link>
+        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Slowroll_Servers.xml</external_sources_link>
 
         <dropped_packages/>
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/tumbleweed/</baseurl>
+                <baseurl>http://download.opensuse.org/update/slowroll/repo/oss/</baseurl>
                 <alias>repo-update</alias>
-                <name>openSUSE-Tumbleweed-Update</name>
+                <name>openSUSE-Slowroll-Update</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
+                <priority config:type="integer">80</priority>
             </extra_url>
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/slowroll/repo/oss/</baseurl>
                 <alias>repo-oss</alias>
-                <name>openSUSE-Tumbleweed-Oss</name>
+                <name>openSUSE-Slowroll-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/tumbleweed/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/slowroll/repo/non-oss/</baseurl>
                 <alias>repo-non-oss</alias>
-                <name>openSUSE-Tumbleweed-Non-Oss</name>
+                <name>openSUSE-Slowroll-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/slowroll/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
-                <name>openSUSE-Tumbleweed-Debug</name>
+                <name>openSUSE-Slowroll-Debug</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/source/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/source/slowroll/repo/src-oss/</baseurl>
                 <alias>repo-source</alias>
-                <name>openSUSE-Tumbleweed-Source</name>
+                <name>openSUSE-Slowroll-Source</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
