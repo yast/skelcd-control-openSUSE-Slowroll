@@ -1,0 +1,34 @@
+
+# See https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  # downloading the Docker image takes some time so bundling several fast
+  # checks into one job avoids that overhead
+  Checks:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        distro: [ "tumbleweed" ]
+
+    container:
+      image: registry.opensuse.org/yast/head/containers_${{matrix.distro}}/yast-ruby
+
+    steps:
+
+    - name: Git Checkout
+      uses: actions/checkout@v4
+
+    - name: POT Check
+      run: rake check:pot
+
+    - name: Validate XML
+      run: make -C control check
+
+    - name: Package Build
+      run: yast-ci-ruby
