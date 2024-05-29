@@ -6,6 +6,9 @@ Yast::Tasks.configuration do |conf|
   conf.exclude_files << /README.md/ #do not pack readme
 end
 
+# Slowroll does not require ID for each change, so this check is unnecessary
+Rake::Task["osc:sr"].prerequisites.delete("check:changelog")
+
 # this package uses the date versioning in master (for openSUSE Tumbleweed),
 # replace the standard yast task implementation
 Rake::Task[:'version:bump'].clear
