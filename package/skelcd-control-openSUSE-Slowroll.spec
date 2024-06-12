@@ -105,7 +105,7 @@ This package contains the control file used for the openSUSE Slowroll installati
 
 %prep
 
-%setup -q -n skelcd-control-openSUSE-Slowroll-%{version}
+%autosetup -p1 -n skelcd-control-openSUSE-Slowroll-%{version}
 
 %build
 
