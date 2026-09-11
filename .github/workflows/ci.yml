@@ -30,6 +30,9 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v4
 
+    - name: Install Dependencies
+      run: zypper --non-interactive install --no-recommends skelcd-control-openSUSE
+
     - name: POT Check
       run: rake check:pot
 
